@@ -1,0 +1,93 @@
+/* ==============================
+   Navbar Styles
+============================== */
+nav {
+  width: 100%;                 /* Full width */
+  position: fixed;             /* Stick to top */
+  top: 0;
+  left: 0;
+
+  background: #0d47a1;        /* Deep Blue */
+  padding: 15px 40px;         /* Adjust padding for height */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+  font-family: 'Inter', sans-serif;
+  z-index: 1000;              /* Stay on top of content */
+  box-sizing: border-box;
+}
+
+/* Logo (optional) */
+nav .logo {
+  font-size: 20px;
+  font-weight: 700;
+  color: #fbbf24;
+  text-decoration: none;
+}
+
+/* Links */
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+nav a:hover {
+  color: #fbbf24; /* Warm Orange */
+  transform: translateY(-2px);
+}
+
+/* Right-side container for links & buttons */
+nav .nav-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Logout / Action Button */
+nav button {
+  background: #f97316; /* Orange */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+nav button:hover {
+  background: #ea580c;
+  transform: translateY(-2px) scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px 20px;
+    gap: 10px;
+  }
+
+  nav a {
+    margin: 6px 0;
+    font-size: 15px;
+  }
+
+  nav .nav-right {
+    width: 100%;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  nav button {
+    width: 100%;
+  }
+}

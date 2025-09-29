@@ -1,0 +1,164 @@
+/* ==============================
+   Take Assessment Container
+============================== */
+.take-assessment {
+  max-width: 750px;
+  margin: 100px auto 50px;
+  padding: 35px 30px;
+  background: #f1f5f9; /* light grayish-blue background */
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  font-family: "Inter", "Segoe UI", Tahoma, sans-serif;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.take-assessment:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 40px rgba(0,0,0,0.12);
+}
+
+.take-assessment h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #fbbf24;          /* amber heading */
+  font-size: 30px;
+  font-weight: 800;
+  border-bottom: 2px solid #f8fafc;
+  padding-bottom: 14px;
+  letter-spacing: -0.5px;
+}
+
+/* ==============================
+   Question Card
+============================== */
+.question-card {
+  background: #fff;          /* white card background */
+  border: 2px solid #1e3a8a; /* deep blue border */
+  border-radius: 12px;
+  padding: 20px 24px;
+  margin-bottom: 22px;
+  transition: 0.3s ease, box-shadow 0.3s ease;
+}
+
+.question-card:hover {
+  border-color: #f97316;    /* vivid orange on hover */
+  background: #f8fafc;      /* very light gray */
+  box-shadow: 0 8px 20px rgba(249, 115, 22, 0.15); /* subtle orange glow */
+}
+
+.question-card p {
+  font-weight: 600;
+  color: #1e293b;           /* dark slate text */
+  margin-bottom: 16px;
+  font-size: 16px;
+}
+
+/* ==============================
+   Options
+============================== */
+.option {
+  display: block;
+  margin: 10px 0;
+  font-size: 15px;
+  color: #1e293b;           /* dark text */
+  cursor: pointer;
+  padding: 10px 14px;
+  border-radius: 8px;
+  transition: all 0.25s ease;
+  border: 1px solid #e2e8f0;
+  background: #f8fafc;
+}
+
+.option:hover {
+  background: #f97316;      /* vivid orange hover */
+  color: #fff;
+}
+
+.option input {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+/* ==============================
+   Submit Button
+============================== */
+.submit-btn {
+  display: block;
+  width: 100%;
+  background: #f97316;       /* vivid orange */
+  color: #fff;
+  border: none;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 25px;
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.submit-btn:hover {
+  background: #ea580c;       /* darker burnt orange */
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 6px 16px rgba(234,88,12,0.3);
+}
+
+/* ==============================
+   Result Box with Animation
+============================== */
+.result-box {
+  text-align: center;
+  padding: 40px;
+  background: #fff;           /* card background */
+  border: 2px solid #1e3a8a; /* deep blue border */
+  border-radius: 14px;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.08);
+  margin-top: 100px;
+  animation: resultFadeIn 0.8s ease forwards;
+  transform: scale(0.95);    /* start smaller for animation */
+}
+
+/* Animate Result Box */
+@keyframes resultFadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.result-box h2 {
+  color: #fbbf24;             /* amber heading */
+  margin-bottom: 18px;
+  font-size: 28px;
+  font-weight: 800;
+  animation: glowText 1.5s ease-in-out infinite alternate;
+}
+
+
+.result-box p {
+  font-size: 22px;
+  font-weight: 700;
+  color: #0d47a1;             /* deep navy brand color */
+  animation: scorePulse 1s ease-in-out infinite alternate;
+}
+
+/* Pulse animation for score */
+@keyframes scorePulse {
+  0% { transform: scale(1); color: #0d47a1; }
+  100% { transform: scale(1.05); color: #2563eb; }
+}
+
+/* ==============================
+   Subtle Animations
+============================== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

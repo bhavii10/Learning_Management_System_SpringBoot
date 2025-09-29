@@ -1,0 +1,141 @@
+/* ==============================
+   Manage Questions Container
+============================== */
+.manage-questions-container {
+  max-width: 850px;
+  margin: 100px auto 40px;
+  padding: 35px;
+  background: #f8fafc; /* very light gray background */
+  border-radius: 16px;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.08);
+  font-family: "Inter", sans-serif;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+/* Headings */
+.manage-questions-container h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0d47a1; /* deep navy */
+  text-align: center;
+  margin-bottom: 25px;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 12px;
+}
+
+.manage-questions-container h3 {
+  margin: 20px 0 15px;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #fbbf24; /* amber heading for emphasis */
+}
+
+/* List Styling */
+.manage-questions-container ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 30px 0;
+}
+
+.manage-questions-container li {
+  background: #fff; /* pure white card */
+  margin-bottom: 14px;
+  padding: 16px 20px;
+  border-radius: 12px;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: #1e293b; /* dark slate gray */
+  border: 1px solid #e2e8f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.manage-questions-container li:hover {
+  transform: translateY(-3px);
+  background: #f1f5f9; /* light grayish-blue hover */
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  border-color: #0d47a1; /* deep navy border on hover */
+}
+
+/* Input Fields */
+.manage-questions-container input {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 14px;
+  border-radius: 10px;
+  border: 2px solid #1e3a8a; /* deep blue border */
+  outline: none;
+  font-size: 1rem;
+  background: #fff;
+  transition: all 0.25s ease;
+}
+
+.manage-questions-container input:focus {
+  border-color: #f97316; /* vivid orange focus */
+  background: #fff;
+  box-shadow: 0 0 10px rgba(249,115,22,0.25);
+}
+
+/* Buttons */
+.manage-questions-container button {
+  display: inline-block;
+  padding: 12px 22px;
+  background: #f97316; /* vivid orange primary button */
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.manage-questions-container button:hover {
+  background: #ea580c; /* darker burnt orange hover */
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 6px 18px rgba(234,88,12,0.35);
+}
+
+/* Edit / Delete buttons inside list items */
+.manage-questions-container .edit-btn,
+.manage-questions-container .delete-btn {
+  padding: 6px 14px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.25s ease, transform 0.2s ease;
+}
+
+.manage-questions-container .edit-btn {
+  background: #0d47a1; /* deep navy */
+  color: #fff;
+}
+
+.manage-questions-container .edit-btn:hover {
+  background: #1e3a8a;
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 6px 18px rgba(13,71,161,0.35);
+}
+
+.manage-questions-container .delete-btn {
+  background: #f97316; /* vivid orange */
+  color: #fff;
+}
+
+.manage-questions-container .delete-btn:hover {
+  background: #ea580c; /* burnt orange hover */
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 6px 18px rgba(234,88,12,0.35);
+}
+
+/* ==============================
+   Animations
+============================== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

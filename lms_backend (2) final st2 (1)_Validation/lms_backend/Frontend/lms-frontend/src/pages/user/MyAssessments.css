@@ -1,0 +1,108 @@
+/* ==============================
+   My Assessments Container
+============================== */
+.my-assessments-container {
+  max-width: 750px;
+  margin: 100px auto 50px;
+  padding: 30px;
+  background: #fff; /* card background */
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.my-assessments-container h2 {
+  text-align: center;
+  font-size: 1.9rem;
+  margin-bottom: 25px;
+  color: #fbbf24;                 /* amber headings */
+  font-weight: 700;
+  border-bottom: 2px solid #f1f5f9; /* light grayish-blue divider */
+  padding-bottom: 12px;
+  letter-spacing: -0.5px;
+}
+
+/* ==============================
+   Course Select
+============================== */
+.course-select {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 2px solid #1e3a8a; /* deep blue borders */
+  margin-bottom: 25px;
+  font-size: 1rem;
+  outline: none;
+  transition: 0.25s;
+  background: #f8fafc; /* light wrapper bg */
+  color: #1e293b;      /* dark slate text */
+}
+
+.course-select:focus {
+  border-color: #f97316; /* vivid orange */
+  box-shadow: 0 0 8px rgba(249, 115, 22, 0.4);
+  background: #fff;
+}
+
+/* ==============================
+   Assessment List
+============================== */
+.assessment-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.assessment-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f1f5f9; /* soft grayish-blue */
+  padding: 14px 18px;
+  margin-bottom: 14px;
+  border-radius: 12px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease, border-color 0.25s ease;
+  font-size: 1.05rem;
+  border-left: 6px solid #0d47a1; /* deep navy left border */
+}
+
+.assessment-list li:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  background: #f8fafc;   /* very light hover */
+  border-left-color: #f97316; /* vivid orange hover */
+}
+
+.assessment-list li span {
+  color: #1e293b; /* dark slate text */
+  font-weight: 500;
+}
+
+/* ==============================
+   Buttons
+============================== */
+.assessment-list a {
+  text-decoration: none;
+  padding: 8px 14px;
+  background: #f97316;  /* vivid orange primary */
+  color: #fff;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: background 0.25s, transform 0.2s;
+}
+
+.assessment-list a:hover {
+  background: #ea580c; /* burnt orange hover */
+  transform: translateY(-2px);
+}
+
+/* ==============================
+   Subtle animation
+============================== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+

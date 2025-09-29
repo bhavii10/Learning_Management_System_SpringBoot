@@ -1,0 +1,404 @@
+/* =======================
+   Global Page Container
+======================= */
+/* ==============================
+   Page Container
+============================== */
+.page {
+  max-width: 900px;
+  margin: 100px auto 60px;
+  padding: 40px;
+  background: #f8fafc; /* very light gray */
+  border-radius: 20px;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.08);
+  font-family: "Inter", sans-serif;
+  color: #1e293b; /* dark slate gray */
+  transition: all 0.3s ease;
+}
+
+/* Headings */
+.page h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #fbbf24; /* amber */
+}
+
+.page h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-top: 25px;
+  margin-bottom: 12px;
+  color: #0d47a1; /* deep navy */
+}
+
+/* Muted Text */
+.page .muted {
+  font-size: 15px;
+  color: #64748b;
+  margin-bottom: 18px;
+}
+
+/* Paragraphs */
+.page p {
+  font-size: 16px;
+  color: #1e293b;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+/* ==============================
+   Buttons
+============================== */
+.btn,
+.btn-secondary,
+.btn-danger {
+  padding: 10px 20px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.btn {
+  background: linear-gradient(135deg, #0d47a1, #f97316); /* navy → orange */
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(13,71,161,0.25);
+}
+
+.btn:hover {
+  background: linear-gradient(135deg, #1e3a8a, #ea580c);
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 8px 20px rgba(234,88,12,0.35);
+}
+
+.btn-secondary {
+  background: #fff; /* white background */
+  color: #0d47a1; /* deep navy text */
+  border: 2px solid #0d47a1;
+}
+
+.btn-secondary:hover {
+  background: #f1f5f9; /* light gray-blue */
+}
+
+.btn-danger {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.btn-danger:hover {
+  background: #fecaca;
+}
+
+/* ==============================
+   Table Styling
+============================== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table th,
+table td {
+  text-align: left;
+  padding: 14px 16px;
+  font-size: 15px;
+}
+
+table th {
+  background: #f1f5f9;
+  color: #1e3a8a;
+  font-weight: 600;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+table td {
+
+  border-bottom: 1px solid #e2e8f0;
+  color: #1e293b;
+}
+
+/* Actions buttons in table */
+.actions button {
+  margin-right: 10px;
+  padding: 6px 12px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease, transform 0.2s ease;
+}
+
+/* Edit button */
+.actions button.btn-secondary {
+  background: #0d47a1;   /* deep navy */
+  color: #fff;
+}
+
+.actions button.btn-secondary:hover {
+  background: #1e3a8a;   /* slightly lighter navy */
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 6px 18px rgba(13,71,161,0.4);
+}
+
+/* Delete button */
+.actions button.btn-danger {
+  background: #f97316;   /* vivid orange */
+  color: #fff;
+}
+
+.actions button.btn-danger:hover {
+  background: #ea580c;   /* burnt orange */
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 6px 18px rgba(234,88,12,0.4);
+}
+
+
+/* ==============================
+   Form Styling
+============================== */
+form.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  animation: fadeIn 0.6s ease forwards;
+}
+
+form.form label {
+  font-weight: 600;
+  color: #1e293b;
+}
+
+form.form input,
+form.form textarea {
+  padding: 12px 14px;
+  font-size: 15px;
+  border: 2px solid #1e3a8a; /* deep blue */
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  background: #fff;
+}
+
+form.form input:focus,
+form.form textarea:focus {
+  border-color: #f97316; /* vivid orange */
+  box-shadow: 0 0 10px rgba(249,115,22,0.3);
+  outline: none;
+  transform: scale(1.02);
+}
+
+/* =======================
+   Grid Layout
+======================= */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 28px;
+}
+
+/* =======================
+   Cards
+======================= */
+.card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 28px;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.06);
+  border: 1px solid #e2e8f0;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: -40%;
+  right: -40%;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(13,71,161,0.15), transparent 70%);
+  transform: rotate(45deg);
+  transition: background 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px) scale(1.02);
+  background: #f1f5f9; /* light gray hover */
+  box-shadow: 0 12px 32px rgba(0,0,0,0.1);
+}
+
+.card:hover::before {
+  background: radial-gradient(circle, rgba(249,115,22,0.25), transparent 70%); /* orange hover glow */
+}
+
+.card h3 {
+  margin: 0 0 12px;        /* a little more breathing room */
+  font-size: 26px;         /* slightly smaller for balance */
+  font-weight: 700;
+  color: #0f172a;          /* darker shade for stronger emphasis */
+  letter-spacing: -0.5px;  /* subtle tightening for heading */
+}
+
+.card .desc {
+  font-size: 16px;         /* a bit larger for readability */
+  color: #475569;          /* softer, modern gray */
+  line-height: 1.75;       /* better reading flow */
+  font-weight: 400;
+}
+
+
+/* =======================
+   Progress Bar
+======================= */
+.progress-container {
+  width: 100%;
+  height: 16px;
+  background: #f1f5f9;
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 20px 0;
+  box-shadow: inset 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #0d47a1, #f97316); /* navy → orange */
+  border-radius: 12px;
+  transition: width 0.4s ease;
+}
+
+.progress-label {
+  font-size: 15px;
+  font-weight: 600;
+  color: #1e293b;
+  margin-top: 6px;
+  text-align: center;
+}
+
+/* ==============================
+   Lesson Form Styling
+============================== */
+.lesson-form {
+  background: #f1f5f9;
+  border: 2px solid #1e3a8a;
+  border-radius: 18px;
+  padding: 16px 20px;
+  position: relative;
+  transition: all 0.25s ease;
+}
+
+.lesson-form:hover {
+  border-color: #f97316;
+  box-shadow: 0 10px 28px rgba(249,115,22,0.15);
+  transform: translateY(-2px);
+}
+
+.lesson-form::before {
+  content: "📘 Lesson";
+  position: absolute;
+  top: -12px;
+  left: 16px;
+  background: #0d47a1;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 2px 10px;
+  border-radius: 8px;
+}
+
+/* ==============================
+   Lessons List
+============================== */
+.lessons {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0;
+}
+
+.lessons li {
+  display: flex;
+  align-items: center;
+  padding: 10px 14px;
+  margin-bottom: 10px;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  background: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  color: #1e293b;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.lessons li:hover {
+  background: #f1f5f9;
+  transform: translateY(-2px);
+}
+
+.lessons input[type="checkbox"] {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #0d47a1; /* deep navy */
+  border-radius: 6px;
+  margin-right: 12px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.25s ease;
+}
+
+.lessons input[type="checkbox"]:checked {
+  background: #f97316;
+  border-color: #f97316;
+}
+
+.lessons input[type="checkbox"]:checked::after {
+  content: "✔";
+  position: absolute;
+  top: 0px;
+  left: 4px;
+  font-size: 14px;
+  color: #fff;
+}
+
+/* ==============================
+   Animations
+============================== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* =======================
+   Download Certificate Button
+======================= */
+button.download-btn {
+  background: linear-gradient(135deg, #0d47a1, #f97316); /* navy → orange */
+  border-radius: 50px;
+  padding: 14px 28px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  border: none;
+  box-shadow: 0 6px 18px rgba(13,71,161,0.3);
+  cursor: pointer;
+  transition: transform 0.2s, background 0.3s, box-shadow 0.3s;
+}
+
+button.download-btn:hover {
+  background: linear-gradient(135deg, #1e3a8a, #ea580c); /* deep blue → burnt orange */
+  transform: scale(1.07);
+  box-shadow: 0 8px 20px rgba(234,88,12,0.4);
+}
+
+button.download-btn:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+  box-shadow: none;
+}

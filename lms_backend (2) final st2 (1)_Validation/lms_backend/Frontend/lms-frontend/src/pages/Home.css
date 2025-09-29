@@ -1,0 +1,191 @@
+/* ==============================
+   Home Page Container
+============================== */
+.home-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 50px 20px;
+  font-family: 'Inter', sans-serif;
+  color: #1e293b;
+  box-sizing: border-box;
+}
+
+/* ==============================
+   Banner Section (with image)
+============================== */
+.home-banner {
+margin-top:20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(135deg, #0d47a1, #f97316);
+  color: white;
+  padding: 40px 30px;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+  margin-bottom: 40px;
+  flex-wrap: wrap; /* For responsiveness */
+}
+
+/* Banner Text */
+/* Banner Text Container */
+.home-banner .banner-text {
+  flex: 1;
+  min-width: 250px;
+
+  /* Animation */
+  opacity: 0;              /* Start invisible */
+  transform: translateY(20px);  /* Start slightly below */
+  animation: fadeSlideUp 1s ease-out forwards;
+  animation-delay: 0.3s;   /* Slight delay for smooth effect */
+}
+
+/* Heading */
+.home-banner .banner-text h1 {
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+  font-weight: 800;
+}
+
+/* Paragraph */
+.home-banner .banner-text p {
+  font-size: 1.3rem;
+}
+
+/* ==============================
+   Keyframes for Fade + Slide Up
+============================== */
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* Banner Illustration */
+.home-banner .banner-image {
+  flex: 1;
+  min-width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.home-banner .banner-image img {
+  max-width: 250px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+    opacity: 0;              /* Start invisible */
+    transform: translateY(20px);  /* Start slightly below */
+    animation: fadeSlideUp 1s ease-out forwards;
+    animation-delay: 0.3s;   /* Slight delay for smooth effect */
+  }
+
+/* ==============================
+   Dashboard Section
+============================== */
+.home-dashboard {
+  text-align: center;
+}
+
+.greeting {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+/* Cards Container */
+.dashboard-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 25px 0;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #fff;
+  padding: 30px 45px;
+  border-radius: 14px;
+  text-decoration: none;
+  color: #0d47a1;
+  font-weight: 700;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
+  min-width: 200px;
+  text-align: center;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.25);
+  background: #fbbf24;
+  color: #0d47a1;
+}
+
+/* Logout Button */
+.logout-btn {
+  padding: 12px 30px;
+  margin-bottom:100px;
+  background-color: #f97316;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
+
+.logout-btn:hover {
+  background-color: #ea580c;
+  transform: translateY(-2px) scale(1.03);
+}
+
+/* Login Prompt */
+.login-prompt {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #1e293b;
+  margin-top: 30px;
+}
+
+.login-prompt a {
+  color: #0d47a1;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+/* ==============================
+   Responsive
+============================== */
+@media (max-width: 900px) {
+  .home-banner {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 20px;
+  }
+
+  .home-banner .banner-image {
+    margin-top: 20px;
+  }
+
+  .dashboard-cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .card {
+    padding: 25px 30px;
+    width: 80%;
+  }
+}

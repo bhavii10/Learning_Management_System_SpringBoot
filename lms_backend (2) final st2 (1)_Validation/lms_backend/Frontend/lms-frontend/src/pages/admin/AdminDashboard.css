@@ -1,0 +1,176 @@
+/* ==============================
+   Admin Dashboard Container
+============================== */
+.admin-dashboard {
+  padding: 30px;
+  max-width: 800px;
+  margin: 100px auto 40px;
+  background: #f1f5f9; /* page background */
+  border-radius: 20px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  animation: slideUp 0.8s ease forwards;
+}
+
+.admin-dashboard:hover {
+  transform: scale(1.01);
+  box-shadow: 0 16px 45px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes slideUp {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* ==============================
+   Loader
+============================== */
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #0d47a1; /* primary brand color */
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  animation: spin 1s linear infinite;
+  margin: 25px auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* ==============================
+   Announcement Form
+============================== */
+.announcement-form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 25px;
+  gap: 12px;
+  animation: fadeIn 0.7s ease forwards;
+}
+
+.announcement-form input,
+.announcement-form textarea {
+  margin: 5px 0;
+  padding: 14px 16px;
+  font-size: 16px;
+  border: 2px solid #1e3a8a; /* deep blue border */
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  background: #fff;
+}
+
+.announcement-form input:focus,
+.announcement-form textarea:focus {
+  border-color: #f97316;  /* vivid orange */
+  box-shadow: 0 0 12px rgba(249,115,22,0.35); /* orange glow */
+  transform: scale(1.02);
+  outline: none;
+}
+
+.announcement-form button {
+  margin-top: 12px;
+  padding: 14px;
+  background: linear-gradient(135deg, #f97316, #ea580c); /* primary button */
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.4s ease, transform 0.3s ease;
+}
+
+.announcement-form button:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 8px 20px rgba(234,88,12,0.35);
+  filter: brightness(1.05);
+}
+
+/* ==============================
+   Announcement List
+============================== */
+.announcement-list {
+  list-style: none;
+  padding: 0;
+  animation: fadeIn 1s ease forwards;
+}
+
+.announcement-list li {
+  border: none;
+  margin: 14px 0;
+  padding: 22px;
+  border-radius: 16px;
+  background: #fff; /* card background */
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.announcement-list li::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(135deg, #0d47a1, #f97316); /* subtle gradient glow */
+  opacity: 0.08;
+  transform: rotate(25deg);
+  transition: opacity 0.4s ease;
+}
+
+.announcement-list li:hover::before {
+  opacity: 0.15;
+}
+
+.announcement-list li:hover {
+  transform: translateY(-5px) scale(1.01);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+  border-left: 4px solid #f97316; /* accent on hover */
+}
+
+/* ==============================
+   Actions Buttons
+============================== */
+.actions {
+  margin-top: 15px;
+}
+
+.actions button {
+  margin-right: 10px;
+  padding: 10px 16px;
+  background: linear-gradient(135deg, #f97316, #ea580c); /* vivid orange */
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease, transform 0.2s ease;
+}
+
+.actions button.edit {
+  background: linear-gradient(135deg, #0d47a1, #1e3a8a); /* deep blue for edit */
+}
+
+.actions button:hover {
+  transform: scale(1.08);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  filter: brightness(1.08);
+}
+
+/* ==============================
+   Smooth Appearance Animation
+============================== */
+.announcement-list li {
+  opacity: 0;
+  animation: fadeInUp 0.6s forwards;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
